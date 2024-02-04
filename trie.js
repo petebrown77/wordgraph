@@ -25,7 +25,7 @@ class Trie {
     }
 
     contains(word, val) {
-        var cur = val || this.root; //problem!
+        var cur = val || this.root; //problem! why????
 
         for (var node in cur) {
             if (word.indexOf(node) === 0) {
@@ -90,14 +90,28 @@ class Trie {
 
         if (prefix !== null) {
             for (const letter of prefix) {
+
+                if (typeof cur === "number" && cur) {
+                    cur = this.endings[cur];
+                }
                 cur = cur[letter];
-                if (cur === undefined) {
-                    return '';
+
+                if (cur === 0) {
+                    return prefix;
                 }
             }
         }
 
         while (true) {
+
+            if (cur === undefined) {
+                return prefix ? prefix + result : result;
+            }
+
+            if (typeof cur === "number") {
+                cur = this.endings[cur];
+            }
+
             const keys = Object.keys(cur);
             const randKey = keys[Math.floor(Math.random() * keys.length)];
 

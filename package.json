@@ -1,6 +1,6 @@
 {
   "name": "wordgraph",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "Directed Acylic Word Graph (DAWG) implementation in Javascript",
   "main": "index.js",
   "scripts": {

@@ -60,7 +60,7 @@ class Trie {
      * @param {string} prefix prefix of words to find
      * @returns {Array} - List of words that start with prefix
      */
-    getPrefixes(prefix) {
+    /*getPrefixes(prefix) {
         var cur = this.root;
 
         //TODO: handle errors
@@ -82,7 +82,7 @@ class Trie {
             }
             //console.log(str);
         }
-    }
+    }*/
 
     genWord(val, prefix = null) {
         let cur = val || this.root;

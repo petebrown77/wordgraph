@@ -1,6 +1,6 @@
 {
   "name": "wordgraph",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "Directed Acylic Word Graph (DAWG) implementation in Javascript",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,15 @@
   },
   "keywords": [
     "NLTK",
-    "NLP"
+    "NLP",
+    "Graph",
+    "DAG",
+    "DAWG"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/petebrown77/wordgraph.git"
+  },
   "author": "Peter Brown",
   "license": "MIT"
 }

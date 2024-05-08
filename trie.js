@@ -25,8 +25,14 @@ class Trie {
     }
 
     contains(word, val) {
-        var cur = val || this.root; //problem! why????
+        //If val is 0, then we have no where to go, and have reached the end of the words
+        // before reaching the end of the word we're checking. Therefore, the word is not
+        // within the trie, and we return false;
+        if (val === 0) {
+            return false;
+        }
 
+        var cur = val || this.root; //problem! why????
         for (var node in cur) {
             if (word.indexOf(node) === 0) {
                 // If it's a number
